@@ -23,21 +23,24 @@ FoodItemList fooditemList = FoodItemList(foodItems: [
     title: "Supreme Pizza Burger",
     restaurant: "Golf Course",
     price: 8.49,
-    imgUrl: "https://static.food2fork.com/burger53be.jpg",
+    imgUrl:
+        "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/190409-pizza-burger-horizontal-1-1555624827.png",
   ),
   FoodItem(
     id: 4,
     title: "Chilly Cheeze Burger",
     restaurant: "Las Vegas Hotel",
     price: 14.49,
-    imgUrl: "https://static.food2fork.com/36725137eb.jpg",
+    imgUrl:
+        "https://gran.luchito.com/wp-content/uploads/2018/09/chilli-con-carne-burger-7.jpg",
   ),
   FoodItem(
     id: 5,
     title: "Beach BBQ Burger",
     restaurant: "Las Vegas Hotel",
     price: 14.49,
-    imgUrl: "https://static.food2fork.com/turkeyburger300x200ff84052e.jpg",
+    imgUrl:
+        "https://i1.wp.com/www.missinthekitchen.com/wp-content/uploads/2019/05/BBQ-Burgers-Recipe-Image.jpg",
   ),
   FoodItem(
     id: 6,
