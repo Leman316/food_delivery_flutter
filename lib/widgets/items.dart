@@ -57,7 +57,7 @@ class Items extends StatelessWidget {
                   right: leftAligned ? 0 : 20,
                 ),
                 child: Column(
-                  // crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Row(
                       children: <Widget>[

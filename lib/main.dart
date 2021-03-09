@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:food_delivery/bloc/cartlistbloc.dart';
+import 'package:food_delivery/screens/cart_screen.dart';
 import 'package:food_delivery/screens/home.dart';
 
 void main() {
@@ -19,6 +20,9 @@ class MyApp extends StatelessWidget {
         title: 'Food Delivery',
         debugShowCheckedModeBanner: false,
         home: Home(),
+        routes: {
+          Cart.routename: (ctx) => Cart(),
+        },
       ),
     );
   }
