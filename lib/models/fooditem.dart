@@ -4,7 +4,7 @@ import 'package:flutter/foundation.dart';
 FoodItemList fooditemList = FoodItemList(foodItems: [
   FoodItem(
     id: 1,
-    title: "Beach BBQ Burger",
+    title: "Beach Burger",
     restaurant: "Las Vegas Hotel",
     price: 14.49,
     imgUrl:
@@ -45,8 +45,8 @@ FoodItemList fooditemList = FoodItemList(foodItems: [
   FoodItem(
     id: 6,
     title: "Beach BBQ Burger",
-    restaurant: "Las Vegas Hotel",
-    price: 14.49,
+    restaurant: "Golf Course",
+    price: 16.49,
     imgUrl:
         "https://cdn.pixabay.com/photo/2018/03/04/20/08/burger-3199088__340.jpg",
   ),

@@ -21,7 +21,7 @@ class CustomAppBar extends StatelessWidget {
             builder: (context, snapshot) {
               List<FoodItem> foodItems = snapshot.data;
               int length = foodItems != null ? foodItems.length : 0;
-              return newGestureDetector(length, context, foodItems);
+              return gestureDetector(length, context, foodItems);
             },
           ),
         ],
@@ -30,7 +30,7 @@ class CustomAppBar extends StatelessWidget {
   }
 }
 
-Widget newGestureDetector(
+Widget gestureDetector(
     int length, BuildContext context, List<FoodItem> foodItems) {
   return GestureDetector(
     onTap: () {
