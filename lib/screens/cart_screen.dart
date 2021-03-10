@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food_delivery/bloc/cartlistbloc.dart';
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:food_delivery/models/fooditem.dart';
+import 'package:food_delivery/widgets/bottombar.dart';
 import 'package:food_delivery/widgets/cartbody.dart';
 
 class Cart extends StatelessWidget {
@@ -20,9 +21,10 @@ class Cart extends StatelessWidget {
                 child: Container(
               child: CartBody(fooditems),
             )),
+            //   bottomNavigationBar: BottomBar(),
           );
         }
-        return Scaffold();
+        return Container();
       },
     );
   }
