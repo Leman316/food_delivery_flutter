@@ -21,7 +21,7 @@ class Cart extends StatelessWidget {
                 child: Container(
               child: CartBody(fooditems),
             )),
-            //   bottomNavigationBar: BottomBar(),
+            bottomNavigationBar: BottomBar(fooditems),
           );
         }
         return Container();
