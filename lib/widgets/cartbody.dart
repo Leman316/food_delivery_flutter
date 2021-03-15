@@ -11,6 +11,7 @@ class CartBody extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.fromLTRB(25, 40, 25, 0),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
           CartAppBar(),
           titlebar(),
@@ -38,7 +39,7 @@ class CartBody extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
-          Column(
+          Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(
