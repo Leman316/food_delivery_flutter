@@ -11,7 +11,7 @@ class Persons extends StatelessWidget {
         children: <Widget>[
           Text("Persons",
               style: TextStyle(
-                fontSize: 14,
+                fontSize: 24,
                 fontWeight: FontWeight.w700,
               )),
           CustomPersonWidget(),
@@ -28,17 +28,17 @@ class CustomPersonWidget extends StatefulWidget {
 
 class _CustomPersonWidgetState extends State<CustomPersonWidget> {
   int no_Person = 0;
-  double _buttonWidth = 30;
+  double _buttonWidth = 20;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(right: 20),
-      padding: const EdgeInsets.all(15),
+      margin: EdgeInsets.only(right: 15),
+      padding: const EdgeInsets.all(10),
       width: 120,
       decoration: BoxDecoration(
         border: Border.all(color: Colors.black, width: 2),
-        borderRadius: BorderRadius.circular(15),
+        borderRadius: BorderRadius.circular(10),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,

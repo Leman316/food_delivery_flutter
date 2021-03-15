@@ -6,6 +6,50 @@ class CartListItem extends StatelessWidget {
   CartListItem(this.foodItem);
   @override
   Widget build(BuildContext context) {
+    return Draggable(
+      child: DraggableChild(foodItem: foodItem),
+      feedback: DraggableChildFeedback(foodItem: foodItem),
+      maxSimultaneousDrags: 1,
+      childWhenDragging: foodItem.quantity > 1
+          ? DraggableChild(foodItem: foodItem)
+          : Container(),
+    );
+    //
+  }
+}
+
+class DraggableChildFeedback extends StatelessWidget {
+  const DraggableChildFeedback({
+    Key key,
+    @required this.foodItem,
+  }) : super(key: key);
+
+  final FoodItem foodItem;
+
+  @override
+  Widget build(BuildContext context) {
+    return Opacity(
+      opacity: 0.7,
+      child: Material(
+        child: Container(
+          margin: const EdgeInsets.fromLTRB(5, 5, 5, 25),
+          child: ItemContent(foodItem),
+        ),
+      ),
+    );
+  }
+}
+
+class DraggableChild extends StatelessWidget {
+  const DraggableChild({
+    Key key,
+    @required this.foodItem,
+  }) : super(key: key);
+
+  final FoodItem foodItem;
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.fromLTRB(5, 5, 5, 25),
       child: ItemContent(foodItem),
@@ -37,7 +81,7 @@ class ItemContent extends StatelessWidget {
                 style: TextStyle(
                     fontSize: 16,
                     color: Colors.black,
-                    fontWeight: FontWeight.w100),
+                    fontWeight: FontWeight.w800),
                 children: [
                   TextSpan(text: foodItem.quantity.toString()),
                   TextSpan(text: 'x'),

@@ -8,6 +8,7 @@ class BottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+        // height: 80,
         margin: const EdgeInsets.only(left: 25, bottom: 30),
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -16,7 +17,7 @@ class BottomBar extends StatelessWidget {
               margin: const EdgeInsets.only(
                 right: 10,
               ),
-              padding: const EdgeInsets.all(25),
+              padding: const EdgeInsets.fromLTRB(10, 5, 15, 5),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
@@ -45,14 +46,14 @@ class BottomBar extends StatelessWidget {
               ),
             ),
             Divider(
-              height: 10,
+              height: 1,
             ),
             Persons(),
             Container(
               margin: EdgeInsets.only(right: 25),
-              padding: EdgeInsets.all(25),
+              padding: EdgeInsets.all(10),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
+                borderRadius: BorderRadius.circular(10),
                 color: Theme.of(context).accentColor,
               ),
               child: nextBar(),
@@ -87,7 +88,7 @@ class BottomBar extends StatelessWidget {
     double totalamount = 0.0;
 
     for (var i = 0; i < fooditems.length; i++) {
-      print(totalamount);
+      //print(totalamount);
       totalamount += fooditems[i].price * fooditems[i].quantity;
     }
     return totalamount.toString();
