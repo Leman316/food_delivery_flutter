@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:food_delivery/bloc/cartlistbloc.dart';
+import 'package:food_delivery/bloc/liststyleColorbloc.dart';
 import 'package:food_delivery/screens/cart_screen.dart';
 import 'package:food_delivery/screens/home.dart';
 
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
     return BlocProvider(
       blocs: [
         Bloc((i) => CartListbloc()),
+        Bloc((i) => ColorBloc()),
       ],
       child: MaterialApp(
         title: 'Food Delivery',

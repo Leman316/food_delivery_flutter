@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:bloc_pattern/bloc_pattern.dart';
+import 'package:food_delivery/bloc/liststyleColorbloc.dart';
 import 'package:food_delivery/models/fooditem.dart';
 
 class CartListItem extends StatelessWidget {
@@ -8,6 +10,7 @@ class CartListItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Draggable(
       child: DraggableChild(foodItem: foodItem),
+      data: foodItem,
       feedback: DraggableChildFeedback(foodItem: foodItem),
       maxSimultaneousDrags: 1,
       childWhenDragging: foodItem.quantity > 1
@@ -28,13 +31,22 @@ class DraggableChildFeedback extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ColorBloc colorBloc = BlocProvider.getBloc<ColorBloc>();
+
     return Opacity(
       opacity: 0.7,
       child: Material(
-        child: Container(
-          margin: const EdgeInsets.fromLTRB(5, 5, 5, 25),
-          child: ItemContent(foodItem),
-        ),
+        child: StreamBuilder<Object>(
+            stream: colorBloc.colorStream,
+            builder: (context, snapshot) {
+              return Container(
+                margin: const EdgeInsets.fromLTRB(5, 5, 5, 25),
+                child: ItemContent(foodItem),
+                decoration: BoxDecoration(
+                  color: snapshot.data != null ? snapshot.data : Colors.white,
+                ),
+              );
+            }),
       ),
     );
   }
